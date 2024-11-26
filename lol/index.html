@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoL - Login</title>
+    <style>
+        body{
+            margin: 0px;
+            background-color: black;
+            background-image: url(img/ashe_wallpaper.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center center;
+
+            font-family: serif;
+            color: white;
+        }
+
+        main{
+            padding-left: 150px;
+            padding-top: 100px;
+        }
+        div#content{
+            border: 2px solid red;
+            width: 500px;
+            height: 700px;
+            
+        }
+        div#upper-logo{
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            border: 2px solid green;
+        }
+
+        img#main-logo{
+            width: 100%;
+        }
+
+        div#login-box{
+            border: 2px solid blue;
+            background-color: rgba(20, 18, 46, 0.788);
+            padding: 10px;
+        }
+        div#credentials{
+            border: 2px solid yellow;
+        }
+
+    </style>
+</head>
+<body> 
+    <main>
+        <div id="content">
+            <div id="upper-logo">
+                <img id="main-logo" src="img/lol_logo.png" alt="league of legends logo">
+            </div>
+            <div id="login-box">
+                <h3>Account Login</h3>
+                <div id="credentials">
+                    <label for="username">Username</label><br>
+                    <input type="text"><br>
+                    <label for="password">Password</label><br>
+                    <input type="password"><br>
+                    <input type="checkbox" name="remember" id="remember">
+                    <label for="remember">Remember Username</label>
+                    <input type="submit" value="Log In">
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>
