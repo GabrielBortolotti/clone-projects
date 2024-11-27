@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LoL - Login</title>
     <style>
+        @font-face {
+            font-family: 'Quadrat';
+            src: url(fonts/quadrat-serial-regular.ttf) format(truetype);
+        }
+
         body{
             margin: 0px;
             background-color: black;
@@ -14,7 +19,7 @@
             background-attachment: fixed;
             background-position: center center;
 
-            font-family: serif;
+            font-family: 'Quadrat';
             color: white;
         }
 
@@ -23,7 +28,7 @@
             padding-top: 100px;
         }
         div#content{
-            border: 2px solid red;
+            /* border: 2px solid red; */
             width: 500px;
             height: 700px;
             
@@ -32,7 +37,7 @@
             padding: 15px;
             display: flex;
             justify-content: center;
-            border: 2px solid green;
+            /* border: 2px solid green; */
         }
 
         img#main-logo{
@@ -40,14 +45,61 @@
         }
 
         div#login-box{
-            border: 2px solid blue;
-            background-color: rgba(20, 18, 46, 0.788);
-            padding: 10px;
-        }
-        div#credentials{
-            border: 2px solid yellow;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 5px;
+            box-shadow: 1px 1px 1px black;
+            background-image: linear-gradient(to top left, rgba(4, 0, 41, 0.993), rgba(0, 15, 83, 0.911));
+            padding: 5px;
+            padding-top: 5px;
         }
 
+        hr{
+            margin: 30px;
+            border-color: rgba(255, 255, 255, 0.404);
+        }
+
+        div#credentials{
+            /* border: 2px solid yellow; */
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+
+        .login-label-1{
+            margin: 5px;
+        }
+
+        .login-form-1{
+            margin-top: 5px;
+            margin-bottom: 15px;
+            width: 95%;
+            height: 25px;
+            border-radius: 5px;
+        }
+
+        input#btn-login{
+            display: flex;
+            background-color: rgb(255, 208, 0);
+            margin-left: auto;
+            height: 30px;
+            width: 100px;
+            border-radius: 5px;
+            font-family: 'Quadrat';
+        }
+
+        p#bottom-label{
+            display: flex;
+            justify-content: center;
+            text-shadow: 1px 1px 1px black;
+        }
+
+        strong{
+            color: yellow;
+        }
+
+        a{
+            text-decoration: none;
+            color: rgb(5, 86, 192);
+        }
     </style>
 </head>
 <body> 
@@ -57,17 +109,23 @@
                 <img id="main-logo" src="img/lol_logo.png" alt="league of legends logo">
             </div>
             <div id="login-box">
-                <h3>Account Login</h3>
+                <h3 style="margin-left: 15px;">Account Login</h3>
+                <hr>
                 <div id="credentials">
-                    <label for="username">Username</label><br>
-                    <input type="text"><br>
-                    <label for="password">Password</label><br>
-                    <input type="password"><br>
+                    <label for="username" class="login-label-1">Username</label><br>
+                    <input type="text" class="login-form-1"><br>
+                    <label for="password" class="login-label-1">Password</label><br>
+                    <input type="password" class="login-form-1"><br>
                     <input type="checkbox" name="remember" id="remember">
                     <label for="remember">Remember Username</label>
-                    <input type="submit" value="Log In">
+                    <input type="submit" id="btn-login" value="Log In">
+                    <hr>
+                    <h3>Don't have an account? <a href="#">Sign up now</a>!</h3>
+                    <p>Forgot you <a href="#">username</a>?</p>
+                    <p>Forgot you <a href="#">password</a>?</p>
                 </div>
             </div>
+            <p id="bottom-label">Playing League of Legends is <strong>FREE</strong>!</p>
         </div>
 
     </main>
